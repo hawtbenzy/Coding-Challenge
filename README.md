@@ -1,2 +1,2 @@
 # Coding-Challenge
-Coding challenges from recruiters
+Coding challenges 
