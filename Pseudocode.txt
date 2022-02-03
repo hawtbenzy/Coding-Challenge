@@ -1,0 +1,8 @@
+PSEUDOCODE
+
+- Program Start
+- Get datatypes for csv files
+- Convert datatypes to suit the user "str"
+- Using sql to link each file together
+- Creating a new column
+- Storing file name of each file in the combined file
