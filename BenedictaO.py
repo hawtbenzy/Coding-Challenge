@@ -27,8 +27,8 @@ def convert_data_type():
     data_types = {"email_hash": str, "category": str}
 
     # Instantiating the dataset as an object
-    file_list = pd.read_cvs(
-        io=file, header=0, dtype=data_types
+    fixtures = pd.read_cvs(
+        io=file_list, header=0, dtype=data_types
     )  # applying new data types
 
     # checking results
@@ -46,8 +46,7 @@ def new_col(file_list):
         filename = pathlib.Path(file).name  # getting file names
         for chunk in dataframe:
             chunk["filename"] = filename  # creating new column and storing filename
-            yield chunk.to_csv(index=False, header=print_header)
-
+            yield chunk.to_csv(index=False, header=print_header, line_terminator = '\n') # 'index=False' - does not index file and 'line_terminator' - eliminates line space
             print_header = False
 
 if __name__ == "__main__":
